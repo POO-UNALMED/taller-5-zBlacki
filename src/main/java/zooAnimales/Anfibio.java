@@ -17,7 +17,7 @@ public class Anfibio extends Animal{
 		this.venenoso = venenoso;
 	}
 	public Anfibio() {
-		this.totalAnfibios ++;
+		totalAnfibios ++;
 	}
 	public int cantidadAnfibios() {
 		return (this.ranas + this.salamandras);
@@ -39,5 +39,8 @@ public class Anfibio extends Animal{
 	public String getColorPiel() {
 		return (this.colorPiel);
 	}		
+	public boolean isVenenoso() {
+		return (this.venenoso);
+	}
 	
 }

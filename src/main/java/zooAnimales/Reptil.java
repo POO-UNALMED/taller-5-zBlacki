@@ -23,7 +23,7 @@ public class Reptil extends Animal{
 		return (this.largoCola);
 	}
 	public Reptil() {
-		this.totalReptiles ++;
+		totalReptiles ++;
 	}
 	public int cantidadReptiles() {
 		return(this.iguanas + this.serpientes);
@@ -31,12 +31,12 @@ public class Reptil extends Animal{
 	public String movimiento() {
 		return ("reptar");
 	}
-	public Reptil crearIguana(String nombre, int edad, String genero) {	
+	public static Reptil crearIguana(String nombre, int edad, String genero) {	
 		Reptil iguanodon = new Reptil (nombre, edad, "humedal", genero, "verde", 3);
 		iguanas ++;
 		return (iguanodon);
 	}
-	public Reptil crearSerpiente(String nombre, int edad, String genero) {
+	public static Reptil crearSerpiente(String nombre, int edad, String genero) {
 		Reptil culebron = new Reptil (nombre, edad, "jungla", genero, "blanco", 3);
 		serpientes ++;
 		return (culebron);
