@@ -13,6 +13,7 @@ public class Ave extends Animal{
 		this.setHabitat(habitat);
 		this.setGenero(genero);
 		this.colorPlumas = colorPlumas;
+		totalAves ++;
 	}
 	public String getColorPlumas() {
 		return (this.colorPlumas);

@@ -15,6 +15,7 @@ public class Anfibio extends Animal{
 		this.setGenero(genero);
 		this.colorPiel = colorPiel;
 		this.venenoso = venenoso;
+		totalAnfibios ++;
 	}
 	public Anfibio() {
 		totalAnfibios ++;

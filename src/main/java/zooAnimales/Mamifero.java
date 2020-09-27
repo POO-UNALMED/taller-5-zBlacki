@@ -16,6 +16,7 @@ public class Mamifero extends Animal{
 		this.setGenero(genero);
 		this.pelaje = pelaje;
 		this.patas = patas;
+		totalMamiferos ++;
 	}
 	public boolean getPelaje() {
 		return (this.pelaje);

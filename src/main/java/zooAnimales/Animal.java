@@ -8,7 +8,7 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private Zona[] zona = new Zona[0];
+	private Zona zona = new Zona();
 	public static int totalMamiferos;
 	public static int totalPeces;
 	public static int totalAnfibios;
@@ -34,8 +34,8 @@ public class Animal {
 				"\nAnfibios: " + totalAnfibios);
 	}
 	public String toString() {
-		if (zona.length == 1) {
-			return ("Mi nombre es " + this.nombre + " tengo una edad de " + this.edad +", habito en " + this.habitat + " y mi genero es " + this.genero + ", la zona en la que me ubico es " + this.zona[0] + ", en el " + this.zona[0].getZoo());
+		if (zona != null) {
+			return ("Mi nombre es " + this.nombre + " tengo una edad de " + this.edad +", habito en " + this.habitat + " y mi genero es " + this.genero + ", la zona en la que me ubico es " + this.zona + ", en el " + zona.getZoo());
 		}
 		else {
 			return("Mi nombre es " + this.nombre + " tengo una edad de " + this.edad +", habito en " + this.habitat + " y mi genero es " + this.genero);

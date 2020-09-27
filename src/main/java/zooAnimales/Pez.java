@@ -15,6 +15,7 @@ public class Pez extends Animal{
 		this.setGenero(genero);
 		this.colorEscamas = colorEscamas;
 		this.cantidadAletas = cantidadAletas;	
+		totalPeces ++;
 	}
 	public String getColorEscamas() {
 		return (this.colorEscamas);
