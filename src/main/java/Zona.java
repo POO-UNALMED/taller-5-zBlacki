@@ -8,9 +8,11 @@ public class Zona {
 	private Zoologico[] zoo = new Zoologico[0];
 	private ArrayList<Animal> animales = new ArrayList<Animal>(); 
 	
-	public void Zona(String nombre, Zoologico[] zoo) {
+	public Zona(String nombre, Zoologico zool) {
+		this.nombre = nombre;
+		zoo[0] = zool; 
 	}
-	public void Zona() {
+	public Zona() {
 	}
 	public void agregarAnimales(Animal nuevoAnimal) {
 		animales.add(nuevoAnimal);
