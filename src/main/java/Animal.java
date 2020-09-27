@@ -26,16 +26,16 @@ public class Animal {
 	public String movimiento() {	
 		return ("desplazarse");
 	}
-	public String totalPorTipo() {
-		return ("Mamiferos: "  + this.totalMamiferos  + 
-				"\nAves: "     + this.totalAves       + 
-				"\nReptiles: " + this.totalReptiles   + 
-				"\nPeces: "    + this.totalPeces      + 
-				"\nAnfibios: " + this.totalAnfibios);
+	public static String totalPorTipo() {
+		return ("Mamiferos: "  + totalMamiferos  + 
+				"\nAves: "     + totalAves       + 
+				"\nReptiles: " + totalReptiles   + 
+				"\nPeces: "    + totalPeces      + 
+				"\nAnfibios: " + totalAnfibios);
 	}
 	public String toString() {
-		if (zona[0] != null) {
-			return ("Mi nombre es " + this.nombre + " tengo una edad de " + this.edad +", habito en " + this.habitat + " y mi genero es " + this.genero + ", la zona en la que me ubico es " + this.zona[0] + ", en el " + this.zona[0].getZoologico());
+		if (zona.length == 1) {
+			return ("Mi nombre es " + this.nombre + " tengo una edad de " + this.edad +", habito en " + this.habitat + " y mi genero es " + this.genero + ", la zona en la que me ubico es " + this.zona[0] + ", en el " + this.zona[0].getZoo());
 		}
 		else {
 			return("Mi nombre es " + this.nombre + " tengo una edad de " + this.edad +", habito en " + this.habitat + " y mi genero es " + this.genero);

@@ -3,12 +3,12 @@ package zooAnimales;
 public class Pez extends Animal{
 	
 	private Pez[] listado;
-	public int salmones;
-	public int bacalaos;
+	static public int salmones;
+	static public int bacalaos;
 	private String colorEscamas;
 	private int cantidadAletas;
 	
-	public void Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
@@ -22,7 +22,7 @@ public class Pez extends Animal{
 	public int getCantidadAletas() {
 		return (this.cantidadAletas);
 	}
-	public void Pez() {
+	public Pez() {
 		this.totalPeces ++;
 	}
 	public int cantidadPeces() {
@@ -31,25 +31,15 @@ public class Pez extends Animal{
 	public String movimiento() {
 		return ("nadar");
 	}
-	public void crearSalmon(String nombre, int edad, String genero) {	
-		new Pez();
-		this.colorEscamas = "rojo";
-		this.cantidadAletas = 6;
-		this.setHabitat("oceano");
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setGenero(genero);
-		this.salmones ++;
+	public Pez crearSalmon(String nombre, int edad, String genero) {	
+		Pez nemo = new Pez (nombre, edad, "oceano", genero, "rojo", 6);
+		salmones ++;
+		return (nemo);		
 	}
-	public void crearBacalao(String nombre, int edad, String genero) {
-		new Pez();
-		this.colorEscamas = "gris";
-		this.cantidadAletas = 6;
-		this.setHabitat("oceano");
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setGenero(genero);
-		this.bacalaos ++;
+	public Pez crearBacalao(String nombre, int edad, String genero) {
+		Pez bacalin = new Pez (nombre, edad, "oceano", genero, "gris", 6);
+		bacalaos ++;
+		return (bacalin);
 	}
 	
 }

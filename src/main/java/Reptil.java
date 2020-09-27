@@ -3,12 +3,12 @@ package zooAnimales;
 public class Reptil extends Animal{
 	
 	private Reptil[] listado;
-	public int iguanas;
-	public int serpientes;
+	static public int iguanas;
+	static public int serpientes;
 	private String colorEscamas;
 	private int largoCola;
 	
-	public void Reptil(String nombre, int edad, String habitat, String genero ,String colorEscamas, int largoCola) {
+	public Reptil(String nombre, int edad, String habitat, String genero ,String colorEscamas, int largoCola) {
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
@@ -22,7 +22,7 @@ public class Reptil extends Animal{
 	public int getLargoCola() {
 		return (this.largoCola);
 	}
-	public void Reptil() {
+	public Reptil() {
 		this.totalReptiles ++;
 	}
 	public int cantidadReptiles() {
@@ -31,25 +31,15 @@ public class Reptil extends Animal{
 	public String movimiento() {
 		return ("reptar");
 	}
-	public void crearIguana(String nombre, int edad, String genero) {	
-		new Reptil();
-		this.colorEscamas = "verde";
-		this.largoCola = 3;
-		this.setHabitat("humedal");
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setGenero(genero);
-		this.iguanas ++;
+	public Reptil crearIguana(String nombre, int edad, String genero) {	
+		Reptil iguanodon = new Reptil (nombre, edad, "humedal", genero, "verde", 3);
+		iguanas ++;
+		return (iguanodon);
 	}
-	public void crearSerpiente(String nombre, int edad, String genero) {
-		new Reptil();
-		this.colorEscamas = "blanco";
-		this.largoCola = 1;
-		this.setHabitat("jungla");
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setGenero(genero);
-		this.serpientes ++;
+	public Reptil crearSerpiente(String nombre, int edad, String genero) {
+		Reptil culebron = new Reptil (nombre, edad, "jungla", genero, "blanco", 3);
+		serpientes ++;
+		return (culebron);
 	}
 	
 }

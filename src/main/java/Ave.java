@@ -30,7 +30,7 @@ public class Ave extends Animal{
 	public void crearHalcon(String nombre, int edad, String genero) {
 		new Ave();
 		this.colorPlumas = "cafe glorioso";
-		this.setHabitat("montañas");
+		this.setHabitat("montanas");
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setGenero(genero);
@@ -39,7 +39,7 @@ public class Ave extends Animal{
 	public void crearAguila(String nombre, int edad, String genero) {
 		new Ave();
 		this.colorPlumas = "blanco y amarillo";
-		this.setHabitat("montañas");
+		this.setHabitat("montanas");
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setGenero(genero);
